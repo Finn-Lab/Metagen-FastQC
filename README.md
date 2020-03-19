@@ -12,12 +12,12 @@ For human decontamination download the hg38 indexed genome here.
 
 ## How to run:
 
-Step 1 (If indexing your own host genome):
+<b>Step 1 (If indexing your own host genome):</b>
 ```
 bwa index host_genome.fa
 ```
 
-Step 2 (or Step 1 if using the above pre-indexed human genome):
+<b>Step 2 (or Step 1 if using the above pre-indexed human genome):</b>
 ```
 $ metagen-fastqc.sh -t 8 -f input_1.fastq(gz) -r input_2.fastq(gz) -c host_genome.fa
 ```
