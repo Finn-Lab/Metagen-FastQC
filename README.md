@@ -1,5 +1,5 @@
-Metagen-FastQC.sh
-=================
+Metagen-FastQC
+==============
 Cleans metagenomic reads to remove adapters, low-quality bases and human contamination:
 
 ## Dependencies:
@@ -12,12 +12,12 @@ Cleans metagenomic reads to remove adapters, low-quality bases and human contami
 
 <b>Locally:</b>
 ```
-$ clean_fastq.sh -t 8 -f input_1.fastq(gz) -r input_2.fastq(gz)
+$ metagen-fastqc.sh -t 8 -f input_1.fastq(gz) -r input_2.fastq(gz)
 ```
 
 <b>In LSF:</b>
 ```
-$ bsub -M 30000 -n 8 -q production-rh74 -o clean.log "clean_fastq.sh -t 8 -f input_1.fastq(gz) -r input_2.fastq(gz)"
+$ bsub -M 30000 -n 8 -q production-rh74 -o clean.log "metagen-fastqc.sh -t 8 -f input_1.fastq(gz) -r input_2.fastq(gz)"
 ```
 
 <b>Notes:</b>
