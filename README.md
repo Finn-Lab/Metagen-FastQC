@@ -1,6 +1,6 @@
 Metagen-FastQC
 ==============
-Cleans metagenomic reads to remove adapters, low-quality bases and human contamination:
+Cleans metagenomic reads to remove adapters, low-quality bases and host (e.g. human) contamination:
 
 ## Dependencies:
 * [trim_galore](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/)
