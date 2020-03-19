@@ -19,7 +19,7 @@ bwa index host_genome.fa
 
 <b>Step 2 (or Step 1 if using the above pre-indexed human genome):</b>
 ```
-$ metagen-fastqc.sh -t 8 -f input_1.fastq(gz) -r input_2.fastq(gz) -c host_genome.fa
+metagen-fastqc.sh -t 8 -f input_1.fastq(gz) -r input_2.fastq(gz) -c host_genome.fa
 ```
 
 <b>Notes:</b>
