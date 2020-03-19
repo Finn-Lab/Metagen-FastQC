@@ -8,18 +8,21 @@ Cleans metagenomic reads to remove adapters, low-quality bases and human contami
 * samtools: http://www.htslib.org/download/
 * bedtools: https://github.com/arq5x/bedtools2/releases
 
-## How to run (with 8 threads):
+For human decontamination download the hg38 indexed genome here.
 
-<b>Locally:</b>
+## How to run:
+
+Step 1 (If indexing your own host genome):
 ```
-$ metagen-fastqc.sh -t 8 -f input_1.fastq(gz) -r input_2.fastq(gz)
+bwa index host_genome.fa
 ```
 
-<b>In LSF:</b>
+Step 2 (or Step 1 if using the above pre-indexed human genome):
 ```
-$ bsub -M 30000 -n 8 -q production-rh74 -o clean.log "metagen-fastqc.sh -t 8 -f input_1.fastq(gz) -r input_2.fastq(gz)"
+$ metagen-fastqc.sh -t 8 -f input_1.fastq(gz) -r input_2.fastq(gz) -c host_genome.fa
 ```
 
 <b>Notes:</b>
+* <b>-t</b> controls the number of threads. Going above 8 does not significantly improve performance.
 * Cleaned files will be generated in the same directory where the original FASTQ files are located and suffixed with "_clean.fastq.gz".
 * <b>-f</b> argument can be either the forward read file or just a single-end FASTQ file (in the latter case -r would be omitted). When using paired-end files, make sure the forward and reverse files end in _1.fastq.gz and _2.fastq.gz, respectively.
