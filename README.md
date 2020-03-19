@@ -3,12 +3,12 @@ Metagen-FastQC
 Cleans metagenomic reads to remove adapters, low-quality bases and human contamination:
 
 ## Dependencies:
-* trim_galore: https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/
-* BWA: https://github.com/lh3/bwa/releases
-* samtools: http://www.htslib.org/download/
-* bedtools: https://github.com/arq5x/bedtools2/releases
+* [trim_galore](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/)
+* [BWA](https://github.com/lh3/bwa/releases)
+* [samtools](http://www.htslib.org/download/)
+* [bedtools](https://github.com/arq5x/bedtools2/releases)
 
-For human decontamination download the hg38 indexed genome here.
+For human decontamination download the hg38 indexed genome [here](http://ftp.ebi.ac.uk/pub/databases/metagenomics/genome_sets/bwa_hg38.tar.gz).
 
 ## How to run:
 
