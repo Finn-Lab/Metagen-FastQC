@@ -12,9 +12,9 @@ Needs bsub (-M 15000)
 OPTIONS:
    -h      Show help message
    -t      Number of threads (recommended: 8) [REQUIRED]
-   -f      Forward or single-end fastq file (.fastq or *_1.fastq.gz) [REQUIRED]
+   -f      Forward or single-end fastq file (.fastq.gz or *_1.fastq.gz) [REQUIRED]
    -c      BWA-indexed host genome (.fa) [REQUIRED]
-   -r	   Reverse fastq file (*_2.fastq or *_2.fastq.gz) [OPTIONAL]
+   -r	   Reverse fastq file (*_2.fastq.gz) [OPTIONAL]
 EOF
 }
 
