@@ -11,9 +11,9 @@ Needs bsub (-M 15000)
 
 OPTIONS:
    -h      Show help message
-   -t      Number of threads (recommended: 16)
+   -t      Number of threads (recommended: 8) [REQUIRED]
    -f      Forward or single-end fastq file (.fastq or *_1.fastq.gz) [REQUIRED]
-   -c      BWA-indexed host genome (.fa)
+   -c      BWA-indexed host genome (.fa) [REQUIRED]
    -r	   Reverse fastq file (*_2.fastq or *_2.fastq.gz) [OPTIONAL]
 EOF
 }
@@ -55,7 +55,7 @@ timestamp() {
 
 echo "$(timestamp) [ metagen-fastqc ] Parsing command-line"
 # check if all required arguments are supplied
-if [[ -z ${FASTQ_R1} ]] || [[ -z ${REF} ]]
+if [[ -z ${THREADS} ]] || [[ -z ${FASTQ_R1} ]] || [[ -z ${REF} ]]
 then
      echo "ERROR : Please supply required arguments"
      usage
